@@ -22,9 +22,16 @@ Vue.use(Toast)
 
 Vue.config.productionTip = false
 
+let metadataApiBaseUrl
+if (process.env.NODE_ENV === 'production') {
+    metadataApiBaseUrl = 'http://api-series-de-tiempo.tasacionya.com/'
+} else {
+    metadataApiBaseUrl = 'http://localhost:8000/'
+}
+
 export const globalStore = new Vue({
     data: {
-        metadataApiBaseUrl: 'http://api-series-de-tiempo.tasacionya.com/'
+        metadataApiBaseUrl: metadataApiBaseUrl
     }
 })
 

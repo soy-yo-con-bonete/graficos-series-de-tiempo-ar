@@ -128,7 +128,38 @@
             <div id="the-chart">
                 <Chart/>
             </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                <h4>Notas</h4>
+                    <ul>
+                        <li>
+                            Esta aplicación está basada en la excelente API de datos del Ministerio de Modernización.
+                            Las bases de datos originales se pueden encontrar <a href="http://datos.gob.ar/dataset">acá</a>, y
+                            las instrucciones para la API, <a href="http://series-tiempo-ar-api.readthedocs.io/es/latest/">acá</a>
+                        </li>
+                        <li>
+                            <strong>Para compartir un gráfico:</strong> simplemente se puede copiar y pegar la dirección (URL) del navegador ("http://series-de-tiempo-ar-graficos.netlify.com/meta=..."). Ejemplos:
+                        </li>
+                        <li>
+                            La opción "Valor ajustado por Inflación Verdadera" deflacta cualquier serie con el índice mensual de 1943
+                            a hoy que hizo <a href="http://www.inflacionverdadera.com/argentina/">Inflación Verdadera</a>. Los datos
+                            hasta Diciembre de 2016 vienen de esa serie; la empalmé con el IPC General del INDEC a partir de esa fecha.
+                        </li>
+                        <li>
+                            El botoncito para bajar los datos viene en el próximo update.
+                        </li>
+                        <li>
+                            Preguntas, sugerencias, comentarios &rarr; <a href="https://twitter.com/SoyYoConBonete_">@SoyYoConBonete_</a>
+                        </li>
+                        <li>
+                            Github: <a href="https://github.com/soy-yo-con-bonete/graficos-series-de-tiempo-ar">soy-yo-con-bonete/graficos-series-de-tiempo-ar</a>
+                        </li>
 
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -261,7 +292,8 @@
         background: white;
         border: 1px black solid;
         height: 100%;
-        width: 450px;
+        max-width: 450px;
+        width: calc(100vw - 55px);
         top: 5px;
     }
     #setup-panel.sidebar-menu-open {
