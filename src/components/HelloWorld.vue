@@ -134,6 +134,8 @@
 </template>
 
 <script>
+    import {globalStore} from '../main.js'
+
     import axios from 'axios'
     import _ from 'lodash'
     import Chart from './Chart.vue'
@@ -182,14 +184,14 @@
             doSearch: function () {
                 let self = this
                 self.waitingSearchResults = true
-                axios.get('http://localhost:8000/query', {
+                axios.get(globalStore.metadataApiBaseUrl + 'query', {
                     params: {
                         q: self.searchQuery,
                         min_periodicity: self.searchMinPeriodicity,
                         min_last_year: self.searchMinLastYear,
                         max_first_year: self.searchMaxFirstYear,
                         dataset_tema: self.searchDatasetTema,
-                        page: self.searchResultsCurrentPage,
+                        page: self.searchResultsCurrentPage
                     }
                 }).then(function (response) {
                     if (process.env.NODE_ENV !== 'production') {

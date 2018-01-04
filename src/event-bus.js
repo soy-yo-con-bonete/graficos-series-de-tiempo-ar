@@ -2,6 +2,8 @@ import Vue from 'vue'
 import axios from 'axios'
 import _ from 'lodash'
 
+import {globalStore} from './main.js'
+
 const bus = new Vue({
     name: 'EventBus',
     template: '<div></div>',
@@ -211,7 +213,7 @@ const bus = new Vue({
         },
         getPriceDeflactorSeries: function () {
             let self = this
-            axios.get('http://localhost:8000/deflactor/mensual').then(function (response) {
+            axios.get(globalStore.metadataApiBaseUrl + 'deflactor/mensual').then(function (response) {
                 let data = response.data.data
                 self.deflactorIpc = {
                     data: data,

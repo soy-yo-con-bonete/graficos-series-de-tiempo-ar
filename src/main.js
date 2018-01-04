@@ -22,6 +22,12 @@ Vue.use(Toast)
 
 Vue.config.productionTip = false
 
+export const globalStore = new Vue({
+    data: {
+        metadataApiBaseUrl: 'http://api-series-de-tiempo.tasacionya.com/'
+    }
+})
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
