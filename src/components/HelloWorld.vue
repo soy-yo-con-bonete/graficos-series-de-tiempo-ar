@@ -13,7 +13,7 @@
                             <div class="input-group mb-2">
                                 <input type="search" class="form-control" v-model="searchQuery" @input="debouncedSearch" placeholder="emae, ipc general, base monetaria, ...">
                                 <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button" @click.prevent="doSearch">Go!</button>
+                                        <button class="btn btn-secondary" type="button" @click.prevent="doSearch"><i class="fa fa-search"></i></button>
                                     </span>
                             </div>
                             <div class="form-group row ml-0 mb-2">
@@ -137,7 +137,10 @@
                         <li>
                             Esta aplicación está basada en la excelente API de datos del Ministerio de Modernización.
                             Las bases de datos originales se pueden encontrar <a href="http://datos.gob.ar/dataset">acá</a>, y
-                            las instrucciones para la API, <a href="http://series-tiempo-ar-api.readthedocs.io/es/latest/">acá</a>
+                            las instrucciones para la API, <a href="http://series-tiempo-ar-api.readthedocs.io/es/latest/">acá</a>.
+                        </li>
+                        <li>
+                            Funciona en cualquier navegador <strong>excepto Internet Explorer</strong>.
                         </li>
                         <li>
                             La opción "Valor ajustado por Inflación Verdadera" deflacta cualquier serie con el índice mensual de 1943
@@ -181,7 +184,7 @@
                 self.$router.push({name: 'HelloWorld', query: {meta: JSON.stringify(newArray)}})
             })
 
-            this.searchQuery = 'emae'
+            this.searchQuery = ''
             this.debouncedSearch()
         },
         name: 'HelloWorld',
