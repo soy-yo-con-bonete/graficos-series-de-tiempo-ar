@@ -123,6 +123,13 @@
                 initialLoadReady: true,
                 seriesFrequency: null,
                 options: {
+                    chart: {
+                        height: 500
+                    },
+                    exporting: {
+                        enabled: true
+
+                    },
                     legend: {
                         enabled: true,
                         layout: 'vertical',
