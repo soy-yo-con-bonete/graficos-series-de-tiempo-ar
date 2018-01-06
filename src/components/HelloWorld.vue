@@ -140,9 +140,6 @@
                             las instrucciones para la API, <a href="http://series-tiempo-ar-api.readthedocs.io/es/latest/">acá</a>.
                         </li>
                         <li>
-                            Funciona en cualquier navegador <strong>excepto Internet Explorer</strong>.
-                        </li>
-                        <li>
                             La opción "Valor ajustado por Inflación Verdadera" deflacta cualquier serie con el índice mensual de 1943
                             a hoy que hizo <a href="http://www.inflacionverdadera.com/argentina/">Inflación Verdadera</a>. Los datos
                             hasta Diciembre de 2016 vienen de esa serie; la empalmé con el IPC General del INDEC a partir de esa fecha.
