@@ -10,7 +10,6 @@ import Highcharts from 'highcharts'
 import Tabs from 'vue-tabs-component'
 import vClickOutside from 'v-click-outside'
 import Toast from 'vue-easy-toast'
-import VueAnalytics from 'vue-analytics'
 
 require('../node_modules/bootstrap/scss/bootstrap.scss') // Bootstrap
 require('../node_modules/font-awesome/css/font-awesome.min.css') //   Icons
@@ -38,10 +37,6 @@ export const globalStore = new Vue({
         metadataApiBaseUrl: metadataApiBaseUrl,
         analyticsId: 'UA-11247975-11'
     }
-})
-
-Vue.use(VueAnalytics, {
-    id: [globalStore.analyticsId]
 })
 
 /* eslint-disable no-new */
