@@ -59,7 +59,39 @@
                                 return defaultText
                             }
                         }
-                    }
+                    },
+                    plotBands: [
+                        {
+                            from: Date.UTC(1994, 12, 1),
+                            to: Date.UTC(1995, 8, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        },
+                        {
+                            from: Date.UTC(1998, 7, 1),
+                            to: Date.UTC(2002, 4, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        },
+                        {
+                            from: Date.UTC(2008, 5, 1),
+                            to: Date.UTC(2009, 4, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        },
+                        {
+                            from: Date.UTC(2011, 9, 1),
+                            to: Date.UTC(2012, 4, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        },
+                        {
+                            from: Date.UTC(2013, 8, 1),
+                            to: Date.UTC(2014, 8, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        },
+                        {
+                            from: Date.UTC(2015, 6, 1),
+                            to: Date.UTC(2016, 10, 1),
+                            color: 'rgba(10, 10, 10, .1)'
+                        }
+                    ]
                 })
                 Vue.set(self.options, 'tooltip', {
                     split: false,

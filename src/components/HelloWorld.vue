@@ -132,6 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <div class="text-center" style="position: relative; top: -20px;">Meses de recesión sombreados en gris</div>
                 <h4>Notas</h4>
                     <ul>
                         <li>
